@@ -31,7 +31,4 @@ springdoc:
     operationsSorter: alpha
 
 cloudinary:
-  url: "cloudinary://224825724857548:i-vAtAYRfuC9se3KEwLivCKd9YE@dpveuqast"
-  cloud-name: "dpveuqast"
-  api-key: "224825724857548"
-  api-secret: "i-vAtAYRfuC9se3KEwLivCKd9YE"
+
