@@ -4,10 +4,12 @@ WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
-# 2. AŞAMA: Run (Çalıştırma) - Burayı değiştirdik!
+# 2. AŞAMA: Run (Çalıştırma)
 FROM eclipse-temurin:17-jdk-focal
 WORKDIR /app
-COPY --from=build /target/linc-0.0.1-SNAPSHOT.jar app.jar
+
+# BURAYI DÜZELTTİK: Başındaki /app kısmını ekledik
+COPY --from=build /app/target/linc-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
